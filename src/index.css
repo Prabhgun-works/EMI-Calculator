@@ -10,19 +10,20 @@ body {
   font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(12, 12, 61) 35%, rgb(12, 44, 50) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(12, 12, 61, 1) 35%, rgba(12, 44, 50, 1) 100%);
   min-height: 100vh;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
-  margin: auto;
+  width: 100%;
   padding: 20px;
 }
 
 .app {
   align-items: center;
-  width: 150%;
-  max-width: 1200px;
+  margin: auto;
+  width: 100%; 
+  max-width: 1400px; 
   padding: 3rem;
   background-color: #ffffff;
   border-radius: 10px;
@@ -90,6 +91,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1rem; /* Added margin for spacing */
 }
 
 .chart-container {
@@ -150,75 +152,57 @@ body {
   font-size: 0.8rem;
 }
 
-.summary-table td {
-  font-size: 0.95rem;
-}
+
 
 /* Tablet Screens */
 @media (max-width: 768px) {
   .app {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem; /* Adjust padding for tablets */
+    width: 95%; /* Slightly wider on tablets */
   }
 
   #result {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column layout */
   }
 
   .chart-container {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Spacing for charts */
   }
 }
 
 /* Mobile Screens */
 @media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
-
   .app {
-    padding: 1.5rem 1rem;
-    max-width: 100%;
-    border-radius: 8px;
+    padding: 1.5rem 1rem; /* Adjust padding for mobile */
+    width: 100%; /* Full width on mobile */
+    max-width: none; /* Remove max-width on mobile */
+    border-radius: 8px; /* Slightly smaller border radius */
   }
 
   #header img {
-    width: 3rem;
+    width: 3rem; /* Smaller logo on mobile */
     height: 3rem;
   }
 
   #header h1 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Smaller header font size */
   }
 
   .input-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Adjust margin for input groups */
   }
 
   #user-input label {
-    font-size: 0.7rem;
+    font-size: 0.7rem; /* Smaller label font size */
   }
 
   #user-input input {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.5rem; /* Smaller input padding */
+    font-size: 0.9rem; /* Smaller input font size */
   }
 
   .summary-table th,
   .summary-table td {
-    padding: 0.75rem;
+    padding: 0.75rem; /* Adjust padding for table cells */
   }
 }
-
-/* Small Mobile Screens */
-@media (max-width: 320px) {
-  .app {
-    padding: 1rem 0.75rem;
-  }
-
-  .chart-legend {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-}
-
