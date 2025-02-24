@@ -158,7 +158,7 @@ body {
 @media (max-width: 768px) {
   .app {
     padding: 2rem 1.5rem; /* Adjust padding for tablets */
-    width: 95%; /* Slightly wider on tablets */
+    width: 80%; /* Slightly wider on tablets */
   }
 
   #result {
@@ -171,14 +171,24 @@ body {
 }
 
 /* Mobile Screens */
+/* Mobile Screens */
 @media (max-width: 480px) {
   .app {
-    padding: 1.5rem 1rem; /* Adjust padding for mobile */
-    width: 100%; /* Full width on mobile */
-    max-width: none; /* Remove max-width on mobile */
-    border-radius: 8px; /* Slightly smaller border radius */
+    padding: 1.5rem 1rem;
+    max-width: 90%; /* Ensure better width usage */
+    align-items: center;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center; /* Center everything inside */
   }
 
+  .chart-container {
+    width: 90%; /* Increase width usage */
+    max-width: 250px; /* Ensure it doesn't stretch too much */
+    margin: 0 auto; /* Center the chart */
+    display: flex;
+    justify-content: center;
+  }
   #header img {
     width: 3rem; /* Smaller logo on mobile */
     height: 3rem;
@@ -200,6 +210,7 @@ body {
     padding: 0.5rem; /* Smaller input padding */
     font-size: 0.9rem; /* Smaller input font size */
   }
+
 
   .summary-table th,
   .summary-table td {
