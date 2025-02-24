@@ -175,7 +175,7 @@ body {
 @media (max-width: 480px) {
   .app {
     padding: 1.5rem 1rem;
-    max-width: 90%; /* Ensure better width usage */
+    max-width: 80%; /* Ensure better width usage */
     align-items: center;
     margin: auto;
     border-radius: 8px;
